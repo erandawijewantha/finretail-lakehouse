@@ -11,7 +11,7 @@ ENV_PATH = BASE_DIR/".env"
 
 load_dotenv(ENV_PATH)
 
-def _get_bool(value: str | None,, default: bool = False) -> bool:
+def _get_bool(value: str | None, default: bool = False) -> bool:
     if value is None:
         return default
     
