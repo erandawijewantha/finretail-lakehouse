@@ -12,6 +12,7 @@ def main() -> None:
     ddl_files = [
         DDL_DIR / "001_create_schemas.sql",
         DDL_DIR / "002_create_control_tables.sql",
+        DDL_DIR / "003_create_raw_tables.sql",
     ]
 
     for ddl_file in ddl_files:
