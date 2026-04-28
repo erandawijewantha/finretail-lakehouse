@@ -9,7 +9,7 @@ def get_logger(name: str) -> logging.logger:
     
     logger = logging.getLogger(name)
     
-    if logger.handler:
+    if logger.handlers:
         return logger
     
     logger.setLevel(logging.INFO)
