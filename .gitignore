@@ -21,3 +21,7 @@ logs/
 
 # Power BI
 *.pbix
+
+*.csv
+*.xlsx
+.data
