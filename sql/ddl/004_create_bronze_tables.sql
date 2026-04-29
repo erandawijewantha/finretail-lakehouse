@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS bronze.customers AS SELECT * FROM raw.customers WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.accounts AS SELECT * FROM raw.accounts WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.branches AS SELECT * FROM raw.branches WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.cards AS SELECT * FROM raw.cards WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.merchants AS SELECT * FROM raw.merchants WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.merchant_categories AS SELECT * FROM raw.merchant_categories WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.exchange_rates AS SELECT * FROM raw.exchange_rates WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.card_transactions AS SELECT * FROM raw.card_transactions WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.account_transactions AS SELECT * FROM raw.account_transactions WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.refunds AS SELECT * FROM raw.refunds WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.chargebacks AS SELECT * FROM raw.chargebacks WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.login_events AS SELECT * FROM raw.login_events WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.device_events AS SELECT * FROM raw.device_events WHERE 1=0;
+CREATE TABLE IF NOT EXISTS bronze.risk_flags AS SELECT * FROM raw.risk_flags WHERE 1=0;
