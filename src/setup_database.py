@@ -15,6 +15,7 @@ def main() -> None:
         DDL_DIR / "003_create_raw_tables.sql",
         DDL_DIR / "004_create_bronze_tables.sql",
         DDL_DIR / "005_create_silver_tables.sql",
+        DDL_DIR / "006_create_gold_tables.sql",
     ]
 
     for ddl_file in ddl_files:
