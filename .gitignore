@@ -25,3 +25,12 @@ logs/
 *.csv
 *.xlsx
 .data
+.emv.airflow
+
+.venv/
+__pycache__/
+*.pyc
+.env
+data/generated/
+.airflow/
+logs/

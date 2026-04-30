@@ -101,6 +101,8 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres:5432/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__LOGGING__WORKER_LOG_SERVER_HOST: airflow-scheduler
+      AIRFLOW__WEBSERVER__BASE_URL: http://localhost:8080
       PYTHONPATH: /opt/airflow
     volumes:
       - ./airflow/dags:/opt/airflow/dags
@@ -128,6 +130,8 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres:5432/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__WEBSERVER__SECRET_KEY: "finretail_fixed_secret_key_2026"
+      AIRFLOW__LOGGING__WORKER_LOG_SERVER_HOST: airflow-scheduler
+      AIRFLOW__WEBSERVER__BASE_URL: http://localhost:8080
       PYTHONPATH: /opt/airflow
     volumes:
       - ./airflow/dags:/opt/airflow/dags

@@ -40,6 +40,9 @@ def gold():
     from src.transform.gold import main
     main()
 
+def data_quality():
+    from src.quality.dq_checks import run_dq_checks
+    run_dq_checks()
 
 with DAG(
     dag_id="finretail_lakehouse_pipeline",
@@ -83,5 +86,10 @@ with DAG(
         task_id="gold_transform",
         python_callable=gold,
     )
+    
+    t8 = PythonOperator(
+    task_id="data_quality_checks",
+    python_callable=data_quality,
+)
 
-    t1 >> t2 >> t3 >> t4 >> t5 >> t6 >> t7
+    t1 >> t2 >> t3 >> t4 >> t5 >> t6 >> t7 >> t8
